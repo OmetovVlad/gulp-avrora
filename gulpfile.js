@@ -33,7 +33,7 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fonstStyle);
 const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, sprite));
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
-const deploy = gulp.series(reset, mainTasks);
+const build = gulp.series(reset, mainTasks);
 
 gulp.task('default', dev);
-gulp.task('deploy', deploy);
+gulp.task('build', build);
