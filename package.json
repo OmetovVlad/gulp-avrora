@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "gulp",
-    "build": "build",
+    "build": "gulp build",
     "sprite": "gulp sprite"
   },
   "repository": {
