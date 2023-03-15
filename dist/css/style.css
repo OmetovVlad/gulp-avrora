@@ -1431,6 +1431,14 @@ template {
   padding-left: 3rem !important;
 }
 
+@font-face {
+  font-family: HelveticaRegular;
+  font-display: swap;
+  src: url("../fonts/HelveticaRegular.woff2") format("woff2"), url("../fonts/HelveticaRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .header {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
