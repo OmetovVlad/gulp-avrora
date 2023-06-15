@@ -2,6 +2,8 @@
 @import "../../node_modules/normalize.css/normalize";
 // Bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap-grid';
+// AOS
+@import '../../node_modules/aos/dist/aos.css';
 
 // Шрифты
 // Удалить файл fonts.scss, если произошли какие-то изменения со шрифтами
@@ -9,6 +11,8 @@
 
 // Переменны (цвета, скорость transition и пр)
 @import "_variables";
+
+@import "_menu";
 
 @import "_header";
 @import "_footer";
@@ -31,8 +35,115 @@ body{
   min-width: 360px;
   overflow-x: hidden;
   font-family: $main_font;
+  font-size: 12px;
+  background-color: $color_01;
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
   main {
     flex: 1 0 auto;
-    padding: 30px 0;
+  }
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h1, h2 {
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  @media (min-width: 768px) {
+    margin: 0 0 45px 0;
+    font-size: 52px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 78px;
+  }
+}
+
+.button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  padding: 5px 30px;
+  line-height: 1;
+  color: $color_01;
+  background-color: $color_02;
+  border-radius: 23px;
+  font-size: 12px;
+  line-height: 1.2;
+  @media (min-width: 576px) {
+    padding: 16px 30px;
+    font-size: 14px;
+    br {
+      display: none;
+    }
+  }
+}
+
+.paralax_image {
+  position: relative;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.text_block {
+  p {
+    line-height: 1.2;
+    margin: 0;
+    & + p {
+      margin-top: 10px;
+      @media (min-width: 992px) {
+        margin-top: 28px;
+      }
+    }
+  }
+}
+
+section {
+  padding: $output_vertical__mobile 0;
+  @media (min-width: 992px) {
+    padding: $output_vertical__md 0;
+  }
+  @media (min-width: 1200px) {
+    padding: $output_vertical 0;
+  }
+  &.dark_section {
+    background-color: $color_02;
+    color: $color_01;
+  }
+}
+
+#section_1 {
+  .offer {
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+    @media (min-width: 992px) {
+      margin-top: 70px;
+    }
+    @media (min-width: 1200px) {
+      margin-top: 110px;
+    }
+  }
+}
+
+#section_about {
+  .middle_text {
+    margin-top: 15px;
+    @media (min-width: 992px) {
+      margin-top: 0;
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
   }
 }

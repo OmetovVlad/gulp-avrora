@@ -20,6 +20,7 @@
   },
   "homepage": "",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "gulp-cli": "^2.3.0",
     "normalize.css": "^8.0.1"
